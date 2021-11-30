@@ -1,8 +1,10 @@
 package eu.gir.basics.proxy;
 
+import eu.gir.basics.command.OpenEditor;
 import eu.gir.basics.init.GIRInit;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +18,7 @@ public class ClientProxy extends CommonProxy {
 	public void preinit(FMLPreInitializationEvent event) {
 		super.preinit(event);
 		MinecraftForge.EVENT_BUS.register(ClientProxy.class);
+		ClientCommandHandler.instance.registerCommand(new OpenEditor());
 	}
 
 	@SubscribeEvent

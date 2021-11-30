@@ -3,6 +3,7 @@ package eu.gir.basics;
 import org.apache.logging.log4j.Logger;
 
 import eu.gir.basics.proxy.CommonProxy;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -16,7 +17,7 @@ public class GIRMain {
 
 	@Instance
 	private static GIRMain instance;
-	public static final String MODID = "test";
+	public static final String MODID = "uieditor";
 
 	public static GIRMain getInstance() {
 		return instance;
